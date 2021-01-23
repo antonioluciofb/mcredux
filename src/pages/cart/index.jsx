@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { useHistory } from "react-router-dom";
 
@@ -10,10 +10,6 @@ import ProductModel from "../products/productModel";
 
 function Cart({ cart, excludeProduct }) {
   const history = useHistory();
-
-  // const [state, setstate] = useState(0);
-
-  // useEffect(() => {}, [state]);
 
   return (
     <Container>
