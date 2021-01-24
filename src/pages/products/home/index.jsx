@@ -41,7 +41,7 @@ function Products({ home, selectProduct }) {
               description={product.description}
               chosen={product.chosen}
               change={() => {
-                selectProduct(product.id, "HOME");
+                selectProduct(product);
               }}
             />
           );
@@ -59,8 +59,8 @@ function mapStateToProps({ products }) {
 
 function mapDispachToProps(dispatch) {
   return {
-    selectProduct(product, type) {
-      const action = Select.selectProduct(product, type);
+    selectProduct(product) {
+      const action = Select.selectProduct(product);
       dispatch(action);
     },
   };

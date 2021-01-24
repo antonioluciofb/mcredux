@@ -34,7 +34,7 @@ function Products({ clothings, selectProduct }) {
         </Button>
       </div>
       <div className="products">
-        {clothings.map((product, i) => (
+        {clothings.map(product => (
           <ProductModel
             key={product.id}
             src={product.image_url}
@@ -44,7 +44,7 @@ function Products({ clothings, selectProduct }) {
             description={product.description}
             chosen={product.chosen}
             change={() => {
-              selectProduct(product.id, "CLOTHINGS");
+              selectProduct(product);
             }}
           />
         ))}
@@ -61,8 +61,8 @@ function mapStateToProps({ products }) {
 
 function mapDispachToProps(dispatch) {
   return {
-    selectProduct(product, type) {
-      const action = Select.selectProduct(product, type);
+    selectProduct(product) {
+      const action = Select.selectProduct(product);
       dispatch(action);
     },
   };

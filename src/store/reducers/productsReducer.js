@@ -11,23 +11,41 @@ export default function ProductsReducer(
   { type, payload }
 ) {
   if (type === "EXCLUDE_PRODUCTS") {
-    const product = state.cart.find((e) => e.id === payload);
+    const { section } = payload;
 
-    var newCart = state.cart.filter((e) => e.id !== product.id);
-    state.cart = newCart;
+    if (section === "HOME") {
+      const product = state.cart.find((e) => e.id === payload.id);
 
-    state.home.forEach((e) => {
-      if (e.id === product.id) {
-        e.chosen = !e.chosen;
-      }
-    });
+      state.cart = state.cart.filter((e) => e.id !== product.id);
 
-    return { ...state };
+      state.home.forEach((e) => {
+        if (e.id === product.id) {
+          e.chosen = !e.chosen;
+        }
+      });
+
+      return { ...state };
+    }
+    if (section === "CLOTHING") {
+      const product = state.cart.find((e) => e.id === payload.id);
+
+      state.cart = state.cart.filter((e) => e.id !== product.id);
+
+      state.clothings.forEach((e) => {
+        if (e.id === product.id) {
+          e.chosen = !e.chosen;
+        }
+      });
+
+      return { ...state };
+    }
   }
 
   if (type === "MODIFIED_PRODUCT") {
-    if (payload.type === "HOME") {
-      const product = state.home.find((e) => e.id === payload.numberProduct);
+    const { section } = payload;
+
+    if (section === "HOME") {
+      const product = state.home.find((e) => e.id === payload.id);
 
       state.home.forEach((e) => {
         if (e.id === product.id) {
@@ -40,10 +58,8 @@ export default function ProductsReducer(
         }
       });
       return { ...state };
-    } else if (payload.type === "CLOTHINGS") {
-      const product = state.clothings.find(
-        (e) => e.id === payload.numberProduct
-      );
+    } else if (section === "CLOTHING") {
+      const product = state.clothings.find((e) => e.id === payload.id);
 
       state.clothings.forEach((e) => {
         if (e.id === product.id) {
@@ -55,6 +71,8 @@ export default function ProductsReducer(
           }
         }
       });
+      return { ...state };
+    } else {
       return { ...state };
     }
   } else return { ...state };

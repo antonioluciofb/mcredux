@@ -16,6 +16,7 @@ const Products = {
     {
       id: 1,
       chosen: false,
+      section: "HOME",
       nome: "Desengordurante",
       image_url: d2l,
       valor: 12,
@@ -25,6 +26,7 @@ const Products = {
     {
       id: 2,
       chosen: false,
+      section: "HOME",
       nome: "Desinfetante",
       image_url: d5l,
       valor: 17,
@@ -34,6 +36,7 @@ const Products = {
     {
       id: 3,
       chosen: false,
+      section: "HOME",
       nome: "Pinho Gel",
       image_url: pg2l,
       valor: 12,
@@ -43,6 +46,7 @@ const Products = {
     {
       id: 4,
       chosen: false,
+      section: "HOME",
       nome: "Pinho Gel",
       image_url: pg5l,
       valor: 25,
@@ -52,6 +56,7 @@ const Products = {
     {
       id: 5,
       chosen: false,
+      section: "HOME",
       nome: "Álcool Perfumado",
       image_url: ap2l,
       valor: 12,
@@ -61,6 +66,7 @@ const Products = {
     {
       id: 6,
       chosen: false,
+      section: "HOME",
       nome: "Brilho Alumínio",
       image_url: d2l,
       valor: 12,
@@ -70,6 +76,7 @@ const Products = {
     {
       id: 8,
       chosen: false,
+      section: "HOME",
       nome: "Sabonete",
       image_url: ap2l,
       valor: 12,
@@ -82,6 +89,7 @@ const Products = {
       id: 9,
       chosen: false,
       nome: "Sabão de Coco",
+      section: "CLOTHING",
       image_url: sc5l,
       valor: 22,
       tamanho: "5l",
@@ -89,6 +97,7 @@ const Products = {
     {
       id: 10,
       chosen: false,
+      section: "CLOTHING",
       nome: "Sabão tipo OMO",
       image_url: t5l,
       valor: 22,
@@ -97,6 +106,7 @@ const Products = {
     {
       id: 11,
       chosen: false,
+      section: "CLOTHING",
       nome: "Alvejante Sem Cloro",
       image_url: asc2l,
       valor: 12,
@@ -105,6 +115,7 @@ const Products = {
     {
       id: 12,
       chosen: false,
+      section: "CLOTHING",
       nome: "Alvejante Sem Cloro",
       image_url: asc5l,
       valor: 25,
@@ -113,6 +124,7 @@ const Products = {
     {
       id: 13,
       chosen: false,
+      section: "CLOTHING",
       nome: "Cloro Puro",
       image_url: cp5l,
       valor: 17,
@@ -121,6 +133,7 @@ const Products = {
     {
       id: 14,
       chosen: false,
+      section: "CLOTHING",
       nome: "Amaciante",
       image_url: a5l,
       valor: 22,

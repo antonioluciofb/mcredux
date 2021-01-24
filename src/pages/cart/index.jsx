@@ -36,7 +36,7 @@ function Cart({ cart, excludeProduct }) {
               description={product.description}
               chosen={product.chosen}
               change={() => {
-                excludeProduct(product.id);
+                excludeProduct(product);
               }}
             />
           );
@@ -54,8 +54,8 @@ function mapStateToProps({ products }) {
 
 function mapDispachToProps(dispatch) {
   return {
-    excludeProduct(product, type) {
-      const action = Exclude.excludeProduct(product, type);
+    excludeProduct(product) {
+      const action = Exclude.excludeProduct(product);
       dispatch(action);
     },
   };

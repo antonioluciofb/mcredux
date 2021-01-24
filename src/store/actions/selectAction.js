@@ -1,9 +1,9 @@
 const selectAction = "MODIFIED_PRODUCT"
 
-function selectProduct(numberProduct,type) {
+function selectProduct(product) {
   return {
     type: selectAction,
-    payload: {numberProduct,type},
+    payload: product,
   };
 }
 

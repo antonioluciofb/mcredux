@@ -1,9 +1,9 @@
 const excludeAction = "EXCLUDE_PRODUCTS"
 
-function excludeProduct(numberProduct) {
+function excludeProduct(product) {
   return {
     type: excludeAction,
-    payload: numberProduct,
+    payload: product,
   };
 }
 
