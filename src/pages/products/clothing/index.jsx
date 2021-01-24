@@ -18,7 +18,7 @@ function Products({ clothings, selectProduct }) {
           className="back"
           type="submit"
           onClick={() => {
-            history.push("/");
+            history.goBack()
           }}
         >
           Back

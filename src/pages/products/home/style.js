@@ -10,6 +10,7 @@ const Container = styled.div`
     width: 99%;
 
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
   .options {

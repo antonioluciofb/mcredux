@@ -21,4 +21,17 @@ export const Container = styled.div`
     font-family: "Pacifico", cursive;
     color: rgba(63, 66, 163, 1);
   }
+
+  @media (max-width: 700px) {
+    height: 120px;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+  }
 `;

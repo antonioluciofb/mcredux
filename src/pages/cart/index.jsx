@@ -18,7 +18,7 @@ function Cart({ cart, excludeProduct }) {
           className="back"
           type="submit"
           onClick={() => {
-            history.push("/");
+            history.goBack()
           }}
         >
           Back
